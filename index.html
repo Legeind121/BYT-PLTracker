@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  ====================================
+  BYT P&L Tracker Landing Page
+  ====================================
+
+  PROJECT STATUS: Core structure complete, pending assets and deployment
+
+  TODO LIST - Next Steps:
+  ====================================
+
+  [ ] 1. CREATE IMAGES FOLDER & ASSETS
+      - Create /images/ directory in project root
+      - Add logo.png (app logo - 120x120px recommended)
+      - Add hero-screenshot.png (dashboard view - 1400px width max)
+      - Add feature-1.png (transaction management screenshot - 800px width)
+      - Add feature-2.png (AI insights screenshot - 800px width)
+      - Add feature-3.png (charts/analytics screenshot - 800px width)
+      - Add feature-4.png (report generation screenshot - 800px width)
+      - Add favicon.png (browser tab icon - 32x32px or 64x64px)
+      - Compress all images with TinyPNG or similar (80% quality)
+      - Consider WebP format for better performance
+
+  [ ] 2. UPDATE GUMROAD INTEGRATION
+      - Create Gumroad account at gumroad.com
+      - Set up product listing with $29 price
+      - Enable license key generation in Gumroad settings
+      - Get your Gumroad product URL
+      - Replace ALL instances of "https://yourname.gumroad.com/l/byt-pl-tracker" with actual URL
+      - Update Gumroad overlay script (line 566) with your embed code from Gumroad dashboard
+      - Test purchase flow end-to-end
+
+  [ ] 3. UPDATE META TAGS
+      - Replace "[your-github-pages-url]" with actual GitHub Pages URL (lines 16, 23)
+      - Update og:image and twitter:image URLs to absolute URLs once deployed
+
+  [ ] 4. TEST LOCALLY
+      - Open index.html in browser (or use local server: python -m http.server 8000)
+      - Test navigation smooth scrolling (all nav links)
+      - Test mobile menu toggle (hamburger icon)
+      - Test FAQ accordion (expand/collapse)
+      - Test all internal links (#features, #pricing, #faq, #contact)
+      - Test responsive design on mobile (375px), tablet (768px), desktop (1920px)
+      - Test keyboard navigation (Tab, Enter, ESC)
+      - Verify all images load correctly
+
+  [ ] 5. OPTIMIZE & VALIDATE
+      - Run Lighthouse audit (aim for 90+ on all metrics)
+      - Run WAVE accessibility checker (https://wave.webaim.org/)
+      - Validate HTML (https://validator.w3.org/)
+      - Validate CSS (https://jigsaw.w3.org/css-validator/)
+      - Check mobile responsiveness (Chrome DevTools device mode)
+      - Test cross-browser (Chrome, Firefox, Safari, Edge)
+
+  [ ] 6. DEPLOY TO GITHUB PAGES
+      - Create GitHub repository (e.g., "byt-pl-tracker-landing")
+      - Push all files to repository (git add . && git commit && git push)
+      - Go to Settings → Pages
+      - Set source to "Deploy from branch: main"
+      - Wait 2-3 minutes for deployment
+      - Visit https://[username].github.io/[repository-name]
+      - Update meta tags with actual deployed URL
+
+  [ ] 7. OPTIONAL: CUSTOM DOMAIN
+      - Purchase domain (e.g., bytpltracker.com)
+      - Add CNAME file to repository root with domain name
+      - Configure DNS at registrar (CNAME → [username].github.io)
+      - Enable HTTPS in GitHub Pages settings
+
+  [ ] 8. POST-LAUNCH MONITORING
+      - Monitor boneyardtees@gmail.com for support requests
+      - Check Gumroad dashboard daily for sales
+      - Collect customer feedback
+      - Plan to add testimonials section after 5+ sales
+      - Consider adding Google Analytics for traffic tracking
+
+  ====================================
+  REFERENCE LINKS:
+  ====================================
+  - Specification: See spec.md in Downloads folder
+  - Project Status: See PROJECT_STATUS.md
+  - Email: boneyardtees@gmail.com
+  - Gumroad: https://gumroad.com
+  - GitHub Pages Docs: https://docs.github.com/en/pages
+
+  ====================================
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>BYT P&L Tracker - Simple Offline Profit & Loss Tracking Software</title>
+  <meta name="title" content="BYT P&L Tracker - Simple Offline Profit & Loss Tracking Software">
+  <meta name="description" content="Track your business income and expenses offline with AI-powered insights. One-time payment of $29. No subscriptions, complete privacy, master in 10 minutes.">
+  <meta name="keywords" content="P&L tracker, profit loss software, offline accounting, small business finance, expense tracker, income tracker">
+  <meta name="author" content="BYT P&L Tracker">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://[your-github-pages-url]/">
+  <meta property="og:title" content="BYT P&L Tracker - Simple Offline Profit & Loss Tracking Software">
+  <meta property="og:description" content="Track your business income and expenses offline with AI-powered insights. One-time payment, no subscriptions.">
+  <meta property="og:image" content="images/hero-screenshot.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://[your-github-pages-url]/">
+  <meta property="twitter:title" content="BYT P&L Tracker - Simple Offline Profit & Loss Tracking Software">
+  <meta property="twitter:description" content="Track your business income and expenses offline with AI-powered insights. One-time payment, no subscriptions.">
+  <meta property="twitter:image" content="images/hero-screenshot.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Skip to Main Content (Accessibility) -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="images/logo.png" alt="BYT P&L Tracker Logo" class="logo-img">
+        <span class="logo-text">BYT P&L Tracker</span>
+      </div>
+
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#pricing" class="nav-cta">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay"></div>
+
+  <!-- Main Content -->
+  <main id="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container hero-content">
+        <img src="images/logo.png" alt="BYT P&L Tracker" class="hero-logo">
+
+        <h1 class="hero-title">BYT P&L Tracker</h1>
+        <p class="hero-subtitle">Simple, Secure, Yours</p>
+
+        <p class="hero-description">
+          Master your business finances in minutes, not hours.<br>
+          Track income, expenses, and profit offline with AI-powered insights.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#pricing" class="cta-primary gumroad-button">Get Started - $29</a>
+          <a href="#features" class="cta-secondary">Learn More ↓</a>
+        </div>
+
+        <div class="hero-screenshot">
+          <img src="images/hero-screenshot.png" alt="BYT P&L Tracker Dashboard" class="screenshot-img">
+        </div>
+
+        <div class="trust-badges">
+          <div class="badge">
+            <span class="badge-icon">✓</span>
+            <span class="badge-text">No Subscriptions - Own It Forever</span>
+          </div>
+          <div class="badge">
+            <span class="badge-icon">✓</span>
+            <span class="badge-text">Completely Offline - Your Data Stays Yours</span>
+          </div>
+          <div class="badge">
+            <span class="badge-icon">✓</span>
+            <span class="badge-text">Master in 10 Minutes - Simple & Intuitive</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section id="problem-solution" class="section">
+      <div class="container">
+        <h2 class="section-title">Tired of Complex Accounting Software?</h2>
+
+        <div class="two-column">
+          <div class="column problem-column">
+            <h3 class="column-title">The Problem</h3>
+            <ul class="problem-list">
+              <li>📊 Spreadsheets are tedious and error-prone</li>
+              <li>💰 Subscription software costs add up ($360+/year)</li>
+              <li>🌐 Cloud services require internet and raise privacy concerns</li>
+              <li>⏰ Complicated tools have steep learning curves</li>
+            </ul>
+          </div>
+
+          <div class="column solution-column">
+            <h3 class="column-title">The Solution</h3>
+            <ul class="solution-list">
+              <li>✅ Automated tracking with smart categorization</li>
+              <li>✅ One-time payment - own it forever</li>
+              <li>✅ 100% offline - your data never leaves your computer</li>
+              <li>✅ Intuitive interface - master it in 10 minutes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section-title">Everything You Need to Track Your Business</h2>
+        <p class="section-subtitle">Powerful features designed for simplicity</p>
+
+        <div class="features-grid">
+
+          <!-- Feature 1 -->
+          <article class="feature-card">
+            <div class="feature-icon">💼</div>
+            <h3 class="feature-title">Smart Transaction Management</h3>
+            <img src="images/feature-1.png" alt="Transaction Management Interface" class="feature-img">
+            <p class="feature-description">
+              Track income and expenses by category and source. Import bank statements via CSV with automatic categorization. Set up your custom categorization rules once, then quick-select them for any transaction. Simple to configure and saves tons of time.
+            </p>
+          </article>
+
+          <!-- Feature 2 -->
+          <article class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3 class="feature-title">AI-Powered Insights</h3>
+            <img src="images/feature-2.png" alt="AI Insights Panel" class="feature-img">
+            <p class="feature-description">
+              Get intelligent alerts about unusual expenses, declining trends, and optimization opportunities. Your personal financial analyst, built right in.
+            </p>
+          </article>
+
+          <!-- Feature 3 -->
+          <article class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3 class="feature-title">Visual Analytics</h3>
+            <img src="images/feature-3.png" alt="Charts and Graphs" class="feature-img">
+            <p class="feature-description">
+              Beautiful charts and graphs that make your financial data easy to understand. Track trends, compare categories, and spot patterns at a glance.
+            </p>
+          </article>
+
+          <!-- Feature 4 -->
+          <article class="feature-card">
+            <div class="feature-icon">📄</div>
+            <h3 class="feature-title">Flexible Reporting</h3>
+            <img src="images/feature-4.png" alt="Report Generation" class="feature-img">
+            <p class="feature-description">
+              Generate professional PDF reports and export data to CSV. Perfect for tax season, investor updates, or your own analysis.
+            </p>
+          </article>
+
+          <!-- Feature 5 -->
+          <article class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 class="feature-title">Lightning Fast Performance</h3>
+            <div class="feature-visual">
+              <svg width="200" height="100" viewBox="0 0 200 100" class="speed-graphic">
+                <path d="M10,50 Q50,10 100,50 T190,50" stroke="#5c9eff" stroke-width="3" fill="none"/>
+                <circle cx="190" cy="50" r="5" fill="#5c9eff"/>
+              </svg>
+            </div>
+            <p class="feature-description">
+              Instant load times, real-time updates, and automatic saves. Your data is stored locally in a SQLite database for maximum speed and reliability.
+            </p>
+          </article>
+
+          <!-- Feature 6 -->
+          <article class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3 class="feature-title">Complete Privacy</h3>
+            <div class="feature-visual">
+              <svg width="200" height="100" viewBox="0 0 200 100" class="lock-graphic">
+                <rect x="70" y="50" width="60" height="40" rx="5" fill="#9f7aea"/>
+                <path d="M80,50 V35 A20,20 0 0 1 120,35 V50" stroke="#9f7aea" stroke-width="6" fill="none"/>
+                <circle cx="100" cy="70" r="5" fill="#1a1a1a"/>
+              </svg>
+            </div>
+            <p class="feature-description">
+              Zero cloud sync means zero privacy concerns. Your financial data stays on your computer, completely offline. No accounts, no tracking, no data collection.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots Gallery -->
+    <section id="screenshots" class="section">
+      <div class="container">
+        <h2 class="section-title">See It In Action</h2>
+
+        <div class="screenshots-grid">
+          <figure class="screenshot-item">
+            <img src="images/hero-screenshot.png" alt="Dashboard Overview" class="gallery-img">
+            <figcaption>Get a complete snapshot of your finances at a glance</figcaption>
+          </figure>
+
+          <figure class="screenshot-item">
+            <img src="images/feature-2.png" alt="AI Insights" class="gallery-img">
+            <figcaption>Smart alerts keep you informed about important trends</figcaption>
+          </figure>
+
+          <figure class="screenshot-item">
+            <img src="images/feature-3.png" alt="Charts and Analytics" class="gallery-img">
+            <figcaption>Visualize your income and expenses over time</figcaption>
+          </figure>
+
+          <figure class="screenshot-item">
+            <img src="images/feature-3.png" alt="Category Breakdown" class="gallery-img">
+            <figcaption>See exactly where your money is going</figcaption>
+          </figure>
+
+          <figure class="screenshot-item">
+            <img src="images/feature-1.png" alt="Transaction Management" class="gallery-img">
+            <figcaption>Easy filtering and powerful search capabilities</figcaption>
+          </figure>
+
+          <figure class="screenshot-item">
+            <img src="images/feature-4.png" alt="CSV Import" class="gallery-img">
+            <figcaption>Import bank statements with one click</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="section">
+      <div class="container">
+        <h2 class="section-title">Why Choose BYT P&L Tracker?</h2>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th class="highlight-column">BYT P&L Tracker</th>
+                <th>QuickBooks Online</th>
+                <th>Excel</th>
+                <th>Wave</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Price</strong></td>
+                <td class="highlight-column">$29 one-time</td>
+                <td>$30/month</td>
+                <td>Free (manual)</td>
+                <td>Free (with ads)</td>
+              </tr>
+              <tr>
+                <td><strong>First Year Cost</strong></td>
+                <td class="highlight-column">$29</td>
+                <td>$360</td>
+                <td>$0</td>
+                <td>$0</td>
+              </tr>
+              <tr>
+                <td><strong>Offline Mode</strong></td>
+                <td class="highlight-column">✅ Always</td>
+                <td>❌ No</td>
+                <td>✅ Yes</td>
+                <td>❌ No</td>
+              </tr>
+              <tr>
+                <td><strong>Privacy</strong></td>
+                <td class="highlight-column">✅ Complete</td>
+                <td>❌ Cloud-based</td>
+                <td>✅ Local</td>
+                <td>❌ Cloud-based</td>
+              </tr>
+              <tr>
+                <td><strong>AI Insights</strong></td>
+                <td class="highlight-column">✅ Built-in</td>
+                <td>❌ Not included</td>
+                <td>❌ No</td>
+                <td>❌ No</td>
+              </tr>
+              <tr>
+                <td><strong>Auto-categorization</strong></td>
+                <td class="highlight-column">✅ Yes</td>
+                <td>✅ Yes</td>
+                <td>❌ Manual</td>
+                <td>✅ Yes</td>
+              </tr>
+              <tr>
+                <td><strong>Learning Curve</strong></td>
+                <td class="highlight-column">✅ 10 minutes</td>
+                <td>❌ Hours/Days</td>
+                <td>⚠️ Medium</td>
+                <td>⚠️ Medium</td>
+              </tr>
+              <tr>
+                <td><strong>Auto-save</strong></td>
+                <td class="highlight-column">✅ Yes</td>
+                <td>✅ Yes</td>
+                <td>❌ Manual</td>
+                <td>✅ Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="comparison-callout">
+          Own your financial software. No subscriptions, no internet required, no compromises.
+        </p>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2 class="section-title">Simple, Transparent Pricing</h2>
+
+        <div class="pricing-card">
+          <div class="pricing-badge">🚀 LAUNCH SPECIAL</div>
+
+          <div class="pricing-price">
+            <span class="price-main">$29</span>
+            <span class="price-regular">Regular price: $49</span>
+          </div>
+
+          <p class="pricing-tagline">One-Time Payment - Yours Forever</p>
+
+          <ul class="pricing-features">
+            <li>✅ Full desktop application</li>
+            <li>✅ Unlimited transactions</li>
+            <li>✅ AI-powered insights</li>
+            <li>✅ PDF & CSV exports</li>
+            <li>✅ Minor updates included (major updates optional)</li>
+            <li>✅ No subscriptions ever</li>
+            <li>✅ Works on Windows, macOS & Linux</li>
+            <li>✅ Full documentation, tooltips & tutorial walkthrough built-in</li>
+          </ul>
+
+          <a href="https://yourname.gumroad.com/l/byt-pl-tracker" class="cta-primary gumroad-button">Get BYT P&L Tracker Now</a>
+
+          <div class="pricing-trust">
+            <p>💳 Secure payment via Gumroad</p>
+            <p>📥 Instant download after purchase</p>
+          </div>
+        </div>
+
+        <p class="pricing-testimonial">
+          Join 100+ business owners who've taken control of their finances
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do I need an internet connection to use BYT P&L Tracker?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No! BYT P&L Tracker is completely offline. Once downloaded, you never need internet to use it. Your data stays on your computer for maximum privacy and speed.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What platforms does it work on?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>BYT P&L Tracker runs on Windows 10 or later, macOS, and Linux. We provide installers for all platforms.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is there a subscription fee?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely not. You pay once ($29 during launch, regular $49) and own it forever. No monthly fees, no hidden costs, no expiration.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How do I get my license key?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>After purchase through Gumroad, you'll immediately receive a download link and your license key via email. The installation process is straightforward with guided steps.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I import data from my bank or other software?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! BYT P&L Tracker imports CSV files from most banks and accounting software. Set up your custom categorization rules once, then quick-select them for any transaction. This saves hours of manual entry and makes imports incredibly fast.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What if I make a mistake entering data?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Mistakes are easy to fix. Every transaction can be edited or deleted with just a few clicks. The interface is designed to make corrections simple and fast.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How secure is my financial data?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Extremely secure. Your data is stored locally on your computer in an encrypted SQLite database. Nothing is ever sent to the cloud or shared online. You have complete control.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do I get updates?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! Your purchase includes all minor updates and patches at no additional cost. Major updates will be available at minimal cost (completely optional - your current version will continue to work perfectly).</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What are the system requirements?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>You need Windows 10 or later (or macOS/Linux), 4GB RAM, and 200MB of free disk space. Any modern computer from the last 5-7 years will run it smoothly.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How do I get support?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>The app includes full documentation, tooltips, and a tutorial walkthrough to help you get started. For additional questions, email us at boneyardtees@gmail.com and we'll typically respond within 24 hours.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section (Placeholder) -->
+    <!-- Uncomment when you have customer reviews
+    <section id="testimonials" class="section">
+      <div class="container">
+        <h2 class="section-title">What Users Are Saying</h2>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p class="quote">"[Customer quote]"</p>
+            <p class="author">- Name, Business Type</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- Final CTA Section -->
+    <section id="final-cta" class="section cta-section">
+      <div class="container">
+        <h2 class="section-title">Ready to Take Control of Your Finances?</h2>
+        <p class="section-subtitle">Join business owners who've simplified their accounting</p>
+
+        <p class="cta-description">
+          Stop wasting time on complex accounting software.<br>
+          Start tracking your profit and loss the simple way.
+        </p>
+
+        <a href="#pricing" class="cta-primary gumroad-button large">Get Started for $29</a>
+
+        <div class="final-trust">
+          <span>✓ Instant download</span>
+          <span>✓ No subscription</span>
+          <span>✓ Secure payment via Gumroad</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="container footer-content">
+
+      <div class="footer-column">
+        <img src="images/logo.png" alt="BYT P&L Tracker" class="footer-logo">
+        <p class="footer-tagline">Simple, Secure, Yours</p>
+        <p class="footer-copyright">© 2025 BYT P&L Tracker. All rights reserved.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3 class="footer-heading">Links</h3>
+        <ul class="footer-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#system-requirements" class="modal-trigger">System Requirements</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3 class="footer-heading">Contact & Legal</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:boneyardtees@gmail.com">boneyardtees@gmail.com</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Gumroad Overlay Script -->
+  <!-- Replace with your actual Gumroad embed code -->
+  <script src="https://gumroad.com/js/gumroad.js"></script>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
