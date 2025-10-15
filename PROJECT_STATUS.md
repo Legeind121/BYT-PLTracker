@@ -270,20 +270,33 @@
   - Product name: "BYT P&L Tracker"
   - Price: $29 (launch special)
   - Description: Use features from landing page
-  - Upload Windows/Mac/Linux installers
-- [ ] Enable license key generation in Gumroad settings
-- [ ] Customize license key email template
+  - Create ZIP package: `PNL-Tracker-v1.0.0-Release.zip` containing:
+    - `PNL-Tracker-Setup-1.0.0.exe` (Windows installer)
+    - `README.txt` (installation instructions)
+    - Optional: `USER_GUIDE.pdf`
+  - Upload ZIP file to Gumroad
+  - Note: Version 1.0 is Windows-only (macOS/Linux coming in future versions)
+- [ ] **DO NOT enable Gumroad's automatic license keys** (you use pre-generated offline keys)
+- [ ] Set up custom purchase confirmation email template (for download link)
+- [ ] Prepare manual license key workflow:
+  - Generate license keys using `scripts/generate-keys.js` (if not already done)
+  - Have `license-keys.csv` ready for tracking sales
+  - Prepare license key email template for manual sending
 - [ ] Get Gumroad product URL (format: `https://yourname.gumroad.com/l/product-slug`)
 - [ ] Replace placeholder URL in index.html (search for "yourname.gumroad.com")
 - [ ] Get Gumroad overlay embed code from dashboard
-- [ ] Replace script tag on line 566 with actual embed code
-- [ ] Test purchase flow end-to-end (use test mode)
+- [ ] Replace script tag on line 625 with actual embed code
+- [ ] Test purchase flow end-to-end:
+  - Test download delivery
+  - Practice manual license key delivery process
+  - Verify key activation in app
+  - Time how long process takes (should be 3-5 minutes per sale)
 
-**Locations to Update:**
-- Line 83: Hero CTA button
-- Line 368: Pricing section CTA button
-- Line 520: Final CTA button
-- Line 566: Gumroad script embed
+**Locations to Update in index.html:**
+- Line 169: Hero CTA button
+- Line 427: Pricing section CTA button
+- Line 579: Final CTA button
+- Line 625: Gumroad script embed
 
 ### Phase 7: Testing & Validation (MEDIUM PRIORITY)
 - [ ] Open index.html in browser (test locally first)
@@ -535,7 +548,9 @@ If you want a custom domain (e.g., `bytpltracker.com`):
 ### Step 2: Create Product
 
 1. Click "Products" → "New Product"
-2. Upload product file (Windows installer)
+2. Upload product file (Windows installer - .exe)
+   - Current version: Windows 10 or later only
+   - Future versions will support macOS and Linux
 3. Fill in details:
    - **Name:** BYT P&L Tracker
    - **Price:** $29
@@ -815,7 +830,7 @@ Replace the following in `index.html`:
 
 **Solutions:**
 1. Create `/images/` directory in project root
-2. Ensure file names match exactly (case-sensitive on Linux/Mac)
+2. Ensure file names match exactly (Windows file names are case-insensitive, but use lowercase for consistency)
 3. Verify paths are relative: `images/logo.png` (not `/images/` or `./images/`)
 
 #### Issue: Mobile menu not working

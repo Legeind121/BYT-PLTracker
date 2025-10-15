@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Read(//c/Users/mcasi/Downloads/**)"
+      "Read(//c/Users/mcasi/Downloads/**)",
+      "Read(//c/Users/mcasi/App Dev/PNL Landing Page/Images/**)"
     ],
     "deny": [],
     "ask": []
