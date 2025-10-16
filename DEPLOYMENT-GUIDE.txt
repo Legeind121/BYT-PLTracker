@@ -107,7 +107,7 @@ STEP 3: ENABLE GITHUB PAGES
 7. Wait 2-3 minutes for GitHub to build and deploy your site
 
 8. Refresh the page - you should see a message:
-   "Your site is live at https://[your-username].github.io/BYT-PLTracker/"
+   "Your site is live at https://legeind121.github.io/BYT-PLTracker/"
 
 9. COPY THIS URL - you'll need it for Step 4
 
@@ -163,8 +163,8 @@ update the meta tags with your live URL:
 
 4. Also update the image URLs to absolute URLs:
 
-   <meta property="og:image" content="https://[your-username].github.io/BYT-PLTracker/images/hero-screenshot.png">
-   <meta property="twitter:image" content="https://[your-username].github.io/BYT-PLTracker/images/hero-screenshot.png">
+   <meta property="og:image" content="https://legeind121.github.io/BYT-PLTracker/images/hero-screenshot.png">
+   <meta property="twitter:image" content="https://legeind121.github.io/BYT-PLTracker/images/hero-screenshot.png">
 
 5. Save the file
 
@@ -187,7 +187,7 @@ STEP 6: GO LIVE!
 
 🎉 CONGRATULATIONS! Your landing page is now LIVE!
 
-Your live URL: https://[your-username].github.io/BYT-PLTracker/
+Your live URL: https://legeind121.github.io/BYT-PLTracker/
 
 What to do now:
 

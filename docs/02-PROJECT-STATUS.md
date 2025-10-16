@@ -130,7 +130,7 @@
 - [ ] Push to GitHub (git push origin main)
 - [ ] Enable GitHub Pages in repository settings
 - [ ] Wait 2-3 minutes for deployment
-- [ ] Visit deployed URL (https://[username].github.io/BYT-PLTracker)
+- [ ] Visit deployed URL (https://legeind121.github.io/BYT-PLTracker)
 - [ ] Update meta tags with actual GitHub Pages URL
 - [ ] Test deployed site thoroughly
 

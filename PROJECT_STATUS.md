@@ -322,7 +322,7 @@
 - [ ] Push to GitHub (git push origin main)
 - [ ] Enable GitHub Pages in repository settings
 - [ ] Wait 2-3 minutes for deployment
-- [ ] Visit deployed URL (https://[username].github.io/BYT-PLTracker)
+- [ ] Visit deployed URL (https://legeind121.github.io/BYT-PLTracker)
 - [ ] Update meta tags with actual GitHub Pages URL
 - [ ] Test deployed site thoroughly
 
@@ -499,7 +499,7 @@ git push -u origin main
 
 ### Step 5: Verify Deployment
 
-1. Visit: `https://[your-username].github.io/BYT-PLTracker`
+1. Visit: `https://legeind121.github.io/BYT-PLTracker`
 2. Test all functionality
 3. Check on mobile device
 4. Verify Gumroad buttons work
@@ -510,10 +510,10 @@ Once deployed, update the following in index.html:
 
 ```html
 <!-- Line 16, 23: Replace [your-github-pages-url] -->
-<meta property="og:url" content="https://[username].github.io/BYT-PLTracker/">
+<meta property="og:url" content="https://legeind121.github.io/BYT-PLTracker/">
 
 <!-- Update og:image and twitter:image to absolute URLs -->
-<meta property="og:image" content="https://[username].github.io/BYT-PLTracker/images/hero-screenshot.png">
+<meta property="og:image" content="https://legeind121.github.io/BYT-PLTracker/images/hero-screenshot.png">
 ```
 
 ### Optional: Custom Domain

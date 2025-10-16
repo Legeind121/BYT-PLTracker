@@ -359,8 +359,8 @@ Save these for frequent use:
 
 **Daily Use:**
 - Gumroad Dashboard: https://app.gumroad.com/
-- GitHub Repository: https://github.com/[your-username]/byt-pl-tracker-landing
-- Live Site: https://[your-username].github.io/byt-pl-tracker-landing
+- GitHub Repository: https://github.com/Legeind121/BYT-PLTracker
+- Live Site: https://legeind121.github.io/BYT-PLTracker
 
 **Weekly Use:**
 - TinyPNG: https://tinypng.com/
