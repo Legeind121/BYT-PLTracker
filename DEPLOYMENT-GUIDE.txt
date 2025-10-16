@@ -20,8 +20,8 @@ STEP 1: CREATE GITHUB REPOSITORY
 
 5. Fill in the repository details:
 
-   Repository name: byt-pl-tracker-landing
-   (or any name you prefer - must be lowercase with dashes)
+   Repository name: BYT-PLTracker
+   (or any name you prefer)
 
    Description: Landing page for BYT P&L Tracker
 
@@ -33,7 +33,7 @@ STEP 1: CREATE GITHUB REPOSITORY
 6. Click "Create repository"
 
 7. COPY the repository URL shown (you'll need it in Step 2)
-   It will look like: https://github.com/[YOUR-USERNAME]/byt-pl-tracker-landing.git
+   It will look like: https://github.com/[YOUR-USERNAME]/BYT-PLTracker.git
 
 ================================================================================
 STEP 2: PUSH YOUR CODE TO GITHUB
@@ -59,10 +59,10 @@ Open Command Prompt or PowerShell and run these commands ONE AT A TIME:
 
 5. Add your GitHub repository as the remote:
 
-   git remote add origin https://github.com/[YOUR-USERNAME]/byt-pl-tracker-landing.git
+   git remote add origin https://github.com/[YOUR-USERNAME]/BYT-PLTracker.git
 
    ⚠️ REPLACE [YOUR-USERNAME] with your actual GitHub username!
-   Example: https://github.com/boneyardtees/byt-pl-tracker-landing.git
+   Example: https://github.com/boneyardtees/BYT-PLTracker.git
 
 6. Set the main branch:
 
@@ -107,7 +107,7 @@ STEP 3: ENABLE GITHUB PAGES
 7. Wait 2-3 minutes for GitHub to build and deploy your site
 
 8. Refresh the page - you should see a message:
-   "Your site is live at https://[your-username].github.io/byt-pl-tracker-landing/"
+   "Your site is live at https://[your-username].github.io/BYT-PLTracker/"
 
 9. COPY THIS URL - you'll need it for Step 4
 
@@ -163,8 +163,8 @@ update the meta tags with your live URL:
 
 4. Also update the image URLs to absolute URLs:
 
-   <meta property="og:image" content="https://[your-username].github.io/byt-pl-tracker-landing/images/hero-screenshot.png">
-   <meta property="twitter:image" content="https://[your-username].github.io/byt-pl-tracker-landing/images/hero-screenshot.png">
+   <meta property="og:image" content="https://[your-username].github.io/BYT-PLTracker/images/hero-screenshot.png">
+   <meta property="twitter:image" content="https://[your-username].github.io/BYT-PLTracker/images/hero-screenshot.png">
 
 5. Save the file
 
@@ -187,7 +187,7 @@ STEP 6: GO LIVE!
 
 🎉 CONGRATULATIONS! Your landing page is now LIVE!
 
-Your live URL: https://[your-username].github.io/byt-pl-tracker-landing/
+Your live URL: https://[your-username].github.io/BYT-PLTracker/
 
 What to do now:
 

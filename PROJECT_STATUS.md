@@ -315,14 +315,14 @@
 - [ ] Validate CSS at [jigsaw.w3.org/css-validator](https://jigsaw.w3.org/css-validator/)
 
 ### Phase 8: Deployment (MEDIUM PRIORITY)
-- [ ] Create GitHub repository (e.g., "byt-pl-tracker-landing")
+- [ ] Create GitHub repository (e.g., "BYT-PLTracker")
 - [ ] Initialize git in project directory
 - [ ] Add all files to git (git add .)
 - [ ] Create initial commit (git commit -m "Initial landing page")
 - [ ] Push to GitHub (git push origin main)
 - [ ] Enable GitHub Pages in repository settings
 - [ ] Wait 2-3 minutes for deployment
-- [ ] Visit deployed URL (https://[username].github.io/[repo-name])
+- [ ] Visit deployed URL (https://[username].github.io/BYT-PLTracker)
 - [ ] Update meta tags with actual GitHub Pages URL
 - [ ] Test deployed site thoroughly
 
@@ -471,7 +471,7 @@ git commit -m "Initial commit: BYT P&L Tracker landing page"
 
 1. Go to [github.com](https://github.com)
 2. Click "New Repository"
-3. Name: `byt-pl-tracker-landing` (or similar)
+3. Name: `BYT-PLTracker` (or similar)
 4. Description: "Landing page for BYT P&L Tracker"
 5. Public repository (required for free GitHub Pages)
 6. Do NOT initialize with README (you already have files)
@@ -481,7 +481,7 @@ git commit -m "Initial commit: BYT P&L Tracker landing page"
 
 ```bash
 # Add GitHub remote (replace with your actual URL)
-git remote add origin https://github.com/[your-username]/byt-pl-tracker-landing.git
+git remote add origin https://github.com/[your-username]/BYT-PLTracker.git
 
 # Push to GitHub
 git branch -M main
@@ -499,7 +499,7 @@ git push -u origin main
 
 ### Step 5: Verify Deployment
 
-1. Visit: `https://[your-username].github.io/byt-pl-tracker-landing`
+1. Visit: `https://[your-username].github.io/BYT-PLTracker`
 2. Test all functionality
 3. Check on mobile device
 4. Verify Gumroad buttons work
@@ -510,10 +510,10 @@ Once deployed, update the following in index.html:
 
 ```html
 <!-- Line 16, 23: Replace [your-github-pages-url] -->
-<meta property="og:url" content="https://[username].github.io/byt-pl-tracker-landing/">
+<meta property="og:url" content="https://[username].github.io/BYT-PLTracker/">
 
 <!-- Update og:image and twitter:image to absolute URLs -->
-<meta property="og:image" content="https://[username].github.io/byt-pl-tracker-landing/images/hero-screenshot.png">
+<meta property="og:image" content="https://[username].github.io/BYT-PLTracker/images/hero-screenshot.png">
 ```
 
 ### Optional: Custom Domain

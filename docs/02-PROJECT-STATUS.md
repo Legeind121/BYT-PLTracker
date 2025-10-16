@@ -123,14 +123,14 @@
 - [ ] Validate CSS at [jigsaw.w3.org/css-validator](https://jigsaw.w3.org/css-validator/)
 
 ### Phase 8: Deployment (MEDIUM PRIORITY)
-- [ ] Create GitHub repository (e.g., "byt-pl-tracker-landing")
+- [ ] Create GitHub repository (e.g., "BYT-PLTracker")
 - [ ] Initialize git in project directory
 - [ ] Add all files to git (git add .)
 - [ ] Create initial commit (git commit -m "Initial landing page")
 - [ ] Push to GitHub (git push origin main)
 - [ ] Enable GitHub Pages in repository settings
 - [ ] Wait 2-3 minutes for deployment
-- [ ] Visit deployed URL (https://[username].github.io/[repo-name])
+- [ ] Visit deployed URL (https://[username].github.io/BYT-PLTracker)
 - [ ] Update meta tags with actual GitHub Pages URL
 - [ ] Test deployed site thoroughly
 
