@@ -1,0 +1,309 @@
+================================================================================
+BYT P&L TRACKER LANDING PAGE - GITHUB DEPLOYMENT GUIDE
+================================================================================
+
+Your landing page is NOW READY TO DEPLOY! All Gumroad URLs have been updated.
+
+Follow these steps exactly to get your landing page live on the internet.
+
+================================================================================
+STEP 1: CREATE GITHUB REPOSITORY
+================================================================================
+
+1. Open your web browser and go to: https://github.com
+
+2. Log in to your GitHub account (or create one if you don't have it)
+
+3. Click the "+" button in the top-right corner
+
+4. Select "New repository"
+
+5. Fill in the repository details:
+
+   Repository name: byt-pl-tracker-landing
+   (or any name you prefer - must be lowercase with dashes)
+
+   Description: Landing page for BYT P&L Tracker
+
+   Visibility: PUBLIC (must be public for free GitHub Pages)
+
+   ⚠️ IMPORTANT: DO NOT check "Initialize this repository with a README"
+   (You already have files, so leave all checkboxes UNCHECKED)
+
+6. Click "Create repository"
+
+7. COPY the repository URL shown (you'll need it in Step 2)
+   It will look like: https://github.com/[YOUR-USERNAME]/byt-pl-tracker-landing.git
+
+================================================================================
+STEP 2: PUSH YOUR CODE TO GITHUB
+================================================================================
+
+Open Command Prompt or PowerShell and run these commands ONE AT A TIME:
+
+1. Navigate to your landing page folder:
+
+   cd "C:\Users\mcasi\App Dev\PNL Tracker\PLTracker-Landing-Page"
+
+2. Initialize git (if not already done):
+
+   git init
+
+3. Add all files to git:
+
+   git add .
+
+4. Create your first commit:
+
+   git commit -m "Initial commit: BYT P&L Tracker landing page with Gumroad integration"
+
+5. Add your GitHub repository as the remote:
+
+   git remote add origin https://github.com/[YOUR-USERNAME]/byt-pl-tracker-landing.git
+
+   ⚠️ REPLACE [YOUR-USERNAME] with your actual GitHub username!
+   Example: https://github.com/boneyardtees/byt-pl-tracker-landing.git
+
+6. Set the main branch:
+
+   git branch -M main
+
+7. Push to GitHub:
+
+   git push -u origin main
+
+8. If prompted for credentials:
+   - Username: Your GitHub username
+   - Password: Use a Personal Access Token (not your password)
+
+   To create a token:
+   - Go to GitHub → Settings → Developer settings → Personal access tokens
+   - Generate new token (classic)
+   - Check "repo" scope
+   - Copy the token and use it as your password
+
+================================================================================
+STEP 3: ENABLE GITHUB PAGES
+================================================================================
+
+1. Go back to your browser and refresh your GitHub repository page
+
+2. You should see all your files (index.html, css/, js/, images/, docs/)
+
+3. Click the "Settings" tab at the top of the repository page
+
+4. In the left sidebar, scroll down and click "Pages"
+
+5. Under "Build and deployment":
+
+   Source: Deploy from a branch
+
+   Branch: Select "main" from the dropdown
+
+   Folder: Select "/ (root)" from the dropdown
+
+6. Click "Save"
+
+7. Wait 2-3 minutes for GitHub to build and deploy your site
+
+8. Refresh the page - you should see a message:
+   "Your site is live at https://[your-username].github.io/byt-pl-tracker-landing/"
+
+9. COPY THIS URL - you'll need it for Step 4
+
+================================================================================
+STEP 4: TEST YOUR LIVE SITE
+================================================================================
+
+1. Click the URL from Step 3 to visit your live landing page
+
+2. Test everything:
+
+   ✅ Page loads correctly
+   ✅ All images display (logo, screenshots, favicon)
+   ✅ Navigation works (click menu items)
+   ✅ Mobile menu works (resize browser or test on phone)
+   ✅ FAQ accordion works (click questions)
+   ✅ Scroll through entire page
+
+   🎯 MOST IMPORTANT: Click all 3 "Get Started" buttons:
+      - Hero section button
+      - Pricing section button
+      - Final CTA button
+
+   Each should open the Gumroad overlay with your product!
+
+3. Test on mobile device:
+   - Open the URL on your phone
+   - Verify everything works
+   - Test the Gumroad purchase flow
+
+4. Test the purchase flow (Gumroad Test Mode):
+   - Click "Get Started"
+   - Use test credit card: 4242 4242 4242 4242
+   - Complete test purchase
+   - Verify you receive download link
+   - Verify email templates look good
+
+================================================================================
+STEP 5: UPDATE META TAGS (OPTIONAL BUT RECOMMENDED)
+================================================================================
+
+For proper social media sharing (when you post your link on Facebook, Twitter, etc.),
+update the meta tags with your live URL:
+
+1. Open index.html in a text editor
+
+2. Find these lines (around lines 102 and 109):
+
+   <meta property="og:url" content="https://[your-github-pages-url]/">
+   <meta property="twitter:url" content="https://[your-github-pages-url]/">
+
+3. Replace [your-github-pages-url] with your actual URL from Step 3
+
+4. Also update the image URLs to absolute URLs:
+
+   <meta property="og:image" content="https://[your-username].github.io/byt-pl-tracker-landing/images/hero-screenshot.png">
+   <meta property="twitter:image" content="https://[your-username].github.io/byt-pl-tracker-landing/images/hero-screenshot.png">
+
+5. Save the file
+
+6. Push the changes to GitHub:
+
+   git add index.html
+   git commit -m "Update meta tags with live URLs"
+   git push
+
+7. Wait 2-3 minutes for GitHub Pages to update
+
+8. Test social sharing:
+   - Share your URL on Facebook
+   - Share your URL on Twitter
+   - Check that preview looks correct
+
+================================================================================
+STEP 6: GO LIVE!
+================================================================================
+
+🎉 CONGRATULATIONS! Your landing page is now LIVE!
+
+Your live URL: https://[your-username].github.io/byt-pl-tracker-landing/
+
+What to do now:
+
+1. Share your landing page:
+   - Post on social media
+   - Add to your email signature
+   - Share in relevant communities
+   - Tell potential customers
+
+2. Monitor sales:
+   - Check Gumroad dashboard daily
+   - Respond to customer emails within 24 hours
+   - Send license keys manually (within 24 hours of purchase)
+
+3. Track the license key workflow:
+   - Open license-keys.csv when you get a sale
+   - Mark a key as sold
+   - Email the key to customer
+   - Track in CSV (key, email, date)
+
+4. Monitor support email: boneyardtees@gmail.com
+   - Respond within 24 hours
+   - Be helpful and friendly
+   - Process refunds within 7 days if requested
+
+5. Collect feedback:
+   - Ask customers what they think
+   - Note feature requests
+   - Plan improvements
+   - Add testimonials after 5+ sales
+
+================================================================================
+OPTIONAL: CUSTOM DOMAIN (LATER)
+================================================================================
+
+If you want your own domain (e.g., bytpltracker.com instead of GitHub URL):
+
+1. Purchase domain from a registrar:
+   - Namecheap: https://www.namecheap.com
+   - Google Domains: https://domains.google
+   - Cloudflare: https://www.cloudflare.com
+
+2. Create a CNAME file in your repository:
+   - Create new file: CNAME (no extension)
+   - Content: bytpltracker.com (your domain)
+   - Commit and push
+
+3. Configure DNS at your registrar:
+   - Add CNAME record: www → [your-username].github.io
+   - Add A records for apex domain:
+     - 185.199.108.153
+     - 185.199.109.153
+     - 185.199.110.153
+     - 185.199.111.153
+
+4. In GitHub Settings → Pages, add your custom domain
+
+5. Enable "Enforce HTTPS"
+
+6. Wait 24-48 hours for DNS propagation
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Problem: "git: command not found"
+Solution: Install Git from https://git-scm.com/download/win
+
+Problem: GitHub Pages not showing my site
+Solution:
+- Wait 2-3 minutes and refresh
+- Check Settings → Pages for build status
+- Verify branch is "main" and folder is "/ (root)"
+- Check that repository is PUBLIC
+
+Problem: Gumroad overlay not appearing
+Solution:
+- Verify Gumroad script is loaded (check browser console)
+- Test in incognito mode (ad blockers may interfere)
+- Verify buttons have class "gumroad-button"
+
+Problem: Images not displaying
+Solution:
+- Check that /images/ folder was pushed to GitHub
+- Verify image paths are correct (case-sensitive on GitHub)
+- Check browser console for 404 errors
+
+Problem: Can't push to GitHub
+Solution:
+- Create Personal Access Token (not password)
+- Go to GitHub → Settings → Developer settings → Personal access tokens
+- Generate token with "repo" scope
+- Use token as password when git asks
+
+================================================================================
+NEED HELP?
+================================================================================
+
+Email: boneyardtees@gmail.com
+
+Common resources:
+- GitHub Pages Docs: https://docs.github.com/en/pages
+- Git Basics: https://git-scm.com/book/en/v2/Getting-Started-Git-Basics
+- Gumroad Help: https://help.gumroad.com/
+
+================================================================================
+
+Good luck with your launch! 🚀
+
+Remember:
+- Test everything before sharing widely
+- Respond to customers promptly
+- Deliver license keys within 24 hours
+- Process refunds within 7 days if requested
+- Collect feedback and testimonials
+
+You've got this! 💪
+
+================================================================================

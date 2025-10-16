@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Read(//c/Users/mcasi/Downloads/**)",
-      "Read(//c/Users/mcasi/App Dev/PNL Landing Page/Images/**)"
+      "Read(//c/Users/mcasi/App Dev/PNL Landing Page/Images/**)",
+      "Read(//c/Users/mcasi/App Dev/PNL Tracker/**)",
+      "Bash(unzip:*)",
+      "Bash(zip:*)",
+      "Bash(powershell:*)"
     ],
     "deny": [],
     "ask": []

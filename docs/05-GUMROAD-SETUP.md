@@ -70,6 +70,14 @@
 3. Set up tax information (required by law)
 4. Choose payout frequency (weekly, biweekly, monthly)
 
+### Refund Policy Setup
+
+1. Go to Settings → General
+2. Scroll to "Refund Policy"
+3. Enable refunds and set to **7 days**
+4. This allows customers to request refunds within 7 days
+5. You'll process refunds manually via Gumroad dashboard
+
 ---
 
 ## Step 3: Create Product
@@ -95,6 +103,7 @@ Take control of your business finances with BYT P&L Tracker - a powerful desktop
 - One-time purchase, no subscriptions
 - Lifetime updates for v1.x
 - Email support: boneyardtees@gmail.com
+- 7-day money-back guarantee
 
 ## Key Features
 
@@ -114,11 +123,15 @@ Take control of your business finances with BYT P&L Tracker - a powerful desktop
 
 ## Installation Process
 
-1. Download the installer (PNL-Tracker-Setup-1.0.0.exe)
+1. Download the installer (PNL Tracker-1.0.0 Setup.exe)
 2. Run the installer
 3. Wait for your license key email (sent within 24 hours)
 4. Enter license key when prompted
 5. Start tracking!
+
+## Refund Policy
+
+We stand behind our product! If BYT P&L Tracker doesn't meet your needs, we offer a full refund within 7 days of purchase, no questions asked. Just email boneyardtees@gmail.com with your order details.
 
 ## Support
 
@@ -144,9 +157,12 @@ Create a ZIP file named: `PNL-Tracker-v1.0.0-Release.zip`
 **Contents:**
 ```
 PNL-Tracker-v1.0.0-Release.zip
-├── PNL-Tracker-Setup-1.0.0.exe  (Windows installer)
+├── PNL Tracker-1.0.0 Setup.exe  (Windows installer)
 ├── README.txt                    (installation instructions)
-└── USER_GUIDE.pdf               (optional: user guide)
+├── USER_GUIDE.pdf                (comprehensive user manual)
+├── USER_GUIDE.md                 (user manual in Markdown format)
+├── CHANGELOG.md                  (version history and features)
+└── LICENSE.txt                   (software license agreement)
 ```
 
 ### README.txt Template
@@ -156,7 +172,8 @@ BYT P&L Tracker v1.0.0
 Installation Instructions
 
 STEP 1: INSTALL THE SOFTWARE
-Double-click "PNL-Tracker-Setup-1.0.0.exe" to start installation.
+Double-click "PNL Tracker-1.0.0 Setup.exe" to start installation.
+Windows may show an "Unknown Publisher" warning - click "More info" then "Run anyway".
 Follow the setup wizard prompts.
 
 STEP 2: WAIT FOR YOUR LICENSE KEY
@@ -166,6 +183,7 @@ Subject: "Your BYT P&L Tracker License Key"
 STEP 3: ACTIVATE THE SOFTWARE
 Launch the application.
 Enter your license key when prompted.
+Key format: PNLT-XXXX-XXXX-XXXX-XXXX
 Click "Activate" to begin.
 
 SYSTEM REQUIREMENTS
@@ -209,8 +227,9 @@ DOWNLOAD YOUR SOFTWARE
 {download_button}
 
 Your download includes:
-- Windows installer (PNL-Tracker-Setup-1.0.0.exe)
+- Windows installer (PNL Tracker-1.0.0 Setup.exe)
 - Installation instructions (README.txt)
+- User Guide (PDF and Markdown formats)
 
 YOUR LICENSE KEY
 You will receive your license key in a SEPARATE EMAIL within 24 hours.
@@ -220,9 +239,12 @@ Please check your spam folder if you don't see it.
 
 INSTALLATION STEPS
 1. Download the files using the button above
-2. Run PNL-Tracker-Setup-1.0.0.exe
+2. Run "PNL Tracker-1.0.0 Setup.exe"
 3. Wait for your license key email
-4. Enter the key when prompted
+4. Enter the key when prompted (format: PNLT-XXXX-XXXX-XXXX-XXXX)
+
+7-DAY MONEY-BACK GUARANTEE
+Not satisfied? No problem! Email us within 7 days for a full refund, no questions asked.
 
 NEED HELP?
 Email: boneyardtees@gmail.com
@@ -266,7 +288,7 @@ license-keys.csv
 Update the CSV row:
 ```csv
 Key,Status,Email,Date
-BYTPL-XXXXX-XXXXX-XXXXX,sold,customer@email.com,2025-01-15
+PNLT-XXXX-XXXX-XXXX-XXXX,sold,customer@email.com,2025-01-15
 ```
 
 **STEP E: Save CSV**
@@ -287,14 +309,14 @@ BYTPL-XXXXX-XXXXX-XXXXX,sold,customer@email.com,2025-01-15
 
 ```csv
 Key,Status,Email,Date
-BYTPL-12345-ABCDE-67890,available,,
-BYTPL-23456-BCDEF-78901,sold,john@example.com,2025-01-15
-BYTPL-34567-CDEFG-89012,sold,jane@example.com,2025-01-16
-BYTPL-45678-DEFGH-90123,available,,
+PNLT-1A2B-3C4D-5E6F-7G8H,available,,
+PNLT-9I0J-1K2L-3M4N-5O6P,sold,john@example.com,2025-01-15
+PNLT-7Q8R-9S0T-1U2V-3W4X,sold,jane@example.com,2025-01-16
+PNLT-5Y6Z-7A8B-9C0D-1E2F,available,,
 ```
 
 **Columns:**
-- **Key:** The license key (format: BYTPL-XXXXX-XXXXX-XXXXX)
+- **Key:** The license key (format: PNLT-XXXX-XXXX-XXXX-XXXX)
 - **Status:** "available" or "sold"
 - **Email:** Customer email (empty if available)
 - **Date:** Sale date in YYYY-MM-DD format (empty if available)
@@ -342,7 +364,8 @@ INSTALLATION INSTRUCTIONS
 1. Download the installer
    (If you didn't receive the download link, check your original purchase email)
 
-2. Run PNL-Tracker-Setup-1.0.0.exe
+2. Run "PNL Tracker-1.0.0 Setup.exe"
+   Windows may show an "Unknown Publisher" warning - click "More info" then "Run anyway".
    Follow the setup wizard prompts.
 
 3. Launch the application
@@ -350,7 +373,7 @@ INSTALLATION INSTRUCTIONS
 
 4. Enter your license key
    Copy and paste the key above when prompted.
-   Key format: BYTPL-XXXXX-XXXXX-XXXXX
+   Key format: PNLT-XXXX-XXXX-XXXX-XXXX
 
 5. Click "Activate"
    Your software is now ready to use!
@@ -368,6 +391,10 @@ GETTING STARTED
 - Watch the tutorial (Help → Replay Tutorial)
 - Import your transactions via CSV (Import Data button)
 - Set up auto-categorization rules (Auto-Categorize Rules button)
+
+7-DAY MONEY-BACK GUARANTEE
+
+Not satisfied? We offer a full refund within 7 days of purchase, no questions asked. Just reply to this email with your refund request.
 
 NEED HELP?
 
@@ -415,13 +442,16 @@ Hi {customer_name},
 
 I'm sorry BYT P&L Tracker didn't meet your needs.
 
-I've processed your refund through Gumroad. You should see the funds back in your account within 5-7 business days.
+I've processed your full refund through Gumroad. You should see the funds back in your account within 5-7 business days (depending on your payment method).
 
-If you'd like to share what didn't work for you, I'd love to hear your feedback to improve the product.
+Your purchase was within our 7-day money-back guarantee period, so you're all set!
 
-Thanks for giving it a try!
+If you'd like to share what didn't work for you, I'd love to hear your feedback to improve the product. But no pressure - I appreciate you giving it a try!
+
+Thanks for your time!
 
 BYT / Boneyard Tees
+boneyardtees@gmail.com
 ```
 
 ---

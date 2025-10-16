@@ -271,9 +271,12 @@
   - Price: $29 (launch special)
   - Description: Use features from landing page
   - Create ZIP package: `PNL-Tracker-v1.0.0-Release.zip` containing:
-    - `PNL-Tracker-Setup-1.0.0.exe` (Windows installer)
+    - `PNL Tracker-1.0.0 Setup.exe` (Windows installer)
     - `README.txt` (installation instructions)
-    - Optional: `USER_GUIDE.pdf`
+    - `USER_GUIDE.pdf` (comprehensive user manual)
+    - `USER_GUIDE.md` (user manual in Markdown)
+    - `CHANGELOG.md` (version history)
+    - `LICENSE.txt` (software license)
   - Upload ZIP file to Gumroad
   - Note: Version 1.0 is Windows-only (macOS/Linux coming in future versions)
 - [ ] **DO NOT enable Gumroad's automatic license keys** (you use pre-generated offline keys)

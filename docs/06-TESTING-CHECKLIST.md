@@ -267,8 +267,9 @@ Run Lighthouse in Chrome DevTools (F12 → Lighthouse tab):
 - [ ] Product listing created
 - [ ] ZIP file uploaded
 - [ ] Price set to $29
-- [ ] Purchase confirmation email configured
-- [ ] License key email template ready
+- [ ] 7-day refund policy enabled in Gumroad settings
+- [ ] Purchase confirmation email configured (includes refund policy)
+- [ ] License key email template ready (includes refund policy)
 
 ### Landing Page Integration
 
@@ -340,7 +341,8 @@ Run Lighthouse in Chrome DevTools (F12 → Lighthouse tab):
 
 - [ ] Contact email is visible
 - [ ] Professional design
-- [ ] Clear refund policy (if applicable)
+- [ ] 7-day money-back guarantee is visible in pricing section
+- [ ] Refund policy FAQ item is present and clear
 - [ ] Testimonials/social proof (if available)
 
 ---
